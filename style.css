@@ -104,3 +104,29 @@ h1 {
   gap: 20px;
 }
 
+.press-button {
+  background-color: #ff66b2;
+  color: white;
+  font-size: 18px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#message-popup {
+  margin-top: 20px;
+  font-size: 18px;
+  background: #ffcce6;
+  padding: 10px 20px;
+  border-radius: 12px;
+  display: none;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
