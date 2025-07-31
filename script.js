@@ -1,9 +1,5 @@
-const poemText = `Four months ago, our story began,
-Not just by fate, but by a perfect plan.
-Through late-night talks and morning smiles,
-We’ve built a bond that stretches miles.
-
-Each "good morning" lights my day,
+document.addEventListener("DOMContentLoaded", () => {
+  const poemText = `Each "good morning" lights my day,
 Each "I miss you" comes to stay.
 Though distance keeps us far apart,
 You live each day inside my heart.
@@ -18,20 +14,21 @@ Four months down, a lifetime to see.
 Happy Anniversary, my sweetest Jee,
 You’re my now, my always — my destiny. 💫`;
 
-let index = 0;
-const speed = 50;
-const poemElement = document.getElementById('poem');
+  const poemElement = document.getElementById("poem");
+  let index = 0;
 
-function typePoem() {
-  if (index < poemText.length) {
-    poemElement.innerHTML += poemText.charAt(index);
-    index++;
-    setTimeout(typePoem, speed);
-  }
-}
+  function typeWriter() {
+    if (index < poemText.length) {
+      poemElement.textContent += poemText.charAt(index);
+      index++;
+      setTimeout(typeWriter, 35);
+    }
+  }
 
-typePoem();
+  typeWriter();
+});
 
 function showMessage() {
-  document.getElementById("message-popup").style.display = "block";
+  const popup = document.getElementById("message-popup");
+  popup.style.display = "block";
 }
