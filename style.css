@@ -130,3 +130,34 @@ h1 {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+.press-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ff66b2;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.press-button:hover {
+  background-color: #e60073;
+}
+
+.message-hidden {
+  display: none;
+  background: #ffb3da;
+  color: #600030;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+  font-weight: bold;
+  animation: fadeIn 1s ease;
+}
