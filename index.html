@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <audio autoplay loop>
+  <audio id="bg-music" loop>
     <source src="music.mp3" type="audio/mp3">
     Your browser does not support the audio element.
   </audio>
@@ -21,7 +21,7 @@
     <p id="poem" class="typewriter"></p>
   </div>
 
- <button class="press-button" onclick="showMessage()">Press Me 💌</button>
+<button id="press-btn" onclick="playMusicAndShowMessage()" class="press-button">💌 Press Me</button>
 <div id="message-popup">Happy 4-Month Anniversary, my sweetest Jee! 💕</div>
   
   <a href="page2.html" class="next-btn">Next Page ➜</a>
