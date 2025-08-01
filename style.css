@@ -1,47 +1,92 @@
-/* Background */
+/* General styles */
 body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #ffeeee, #ffe5ec);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffe6eb;
+  color: #d6004c;
+  text-align: center;
 }
 
-/* Header Title */
+/* PAGE 1 */
 h1 {
-    color: #e91e63;
-    font-size: 24px;
-    text-align: center;
-    margin: 0 20px;
+  font-size: 2rem;
+  margin-top: 40px;
+  font-family: 'Dancing Script', cursive;
 }
 
-/* Paragraph Text */
+h3 {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
 p {
-    font-size: 18px;
-    color: #d81b60;
-    text-align: center;
-    margin: 10px 20px;
+  max-width: 700px;
+  margin: 20px auto;
+  font-size: 1.3rem;
+  line-height: 1.6;
 }
 
-/* Navigation Button */
-a.button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background-color: #ff69b4;
-    color: white;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
+button {
+  background-color: #fff0f5;
+  color: #d6004c;
+  border: 1px solid #d6004c;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-/* Optional Heart Icon Styling */
+a {
+  color: #5200b6;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+  margin-top: 20px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* PAGE 2 */
+.second-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ffe6eb;
+  overflow: hidden;
+}
+
+.page2-content {
+  position: relative;
+}
+
+.floating-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  animation: float 3s ease-in-out infinite, heartbeat 1.5s infinite;
+  margin-top: 20px;
+  color: #d6004c;
+}
+
+/* Heart icon */
 .heart {
-    font-size: 32px;
-    margin: 20px 0;
+  font-size: 2.5rem;
+  color: #ff3366;
+  animation: heartbeat 1.5s infinite;
+  margin-top: 10px;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
 }
