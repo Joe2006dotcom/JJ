@@ -11,9 +11,17 @@ body {
 }
 
 .couple-photo {
-  max-width: 200px;
-  border-radius: 15px;
+  max-width: 90%;
+  width: 700px;
+  border-radius: 20px;
   margin: 10px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.couple-photo:hover {
+  transform: scale(1.03);
+
 }
 
 h1 {
@@ -72,12 +80,11 @@ h1 {
 }
 
 .floating-text {
-  font-size: 32px; /* You can increase this if needed */
-  font-weight: bold;
-  color: #e91e63;
-  animation: floatText 3s ease-in-out infinite;
+  font-size: 24px;
+  color: #d1005b;
+  animation: float 3s infinite ease-in-out;
   text-align: center;
-  margin-top: 40vh;
+  padding: 10px;
 }
 
 @keyframes float {
@@ -90,62 +97,10 @@ h1 {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-.press-button {
-  background-color: #ff66b2;
-  color: white;
-  font-size: 18px;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  margin-top: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
-#message-popup {
-  margin-top: 20px;
-  font-size: 18px;
-  background: #ffcce6;
-  padding: 10px 20px;
-  border-radius: 12px;
-  display: none;
-  animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-/* Add this at the end of style.css */
-
-.press-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 25px;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: #ff66b2;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.press-button:hover {
-  background-color: #e60073;
-}
-
-.message-hidden {
-  display: none;
-  background: #ffb3da;
-  color: #600030;
-  padding: 15px;
-  border-radius: 10px;
-  margin: 20px auto;
-  width: 90%;
-  max-width: 300px;
-  text-align: center;
-  font-weight: bold;
-  animation: fadeIn 1s ease;
+.page2-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
