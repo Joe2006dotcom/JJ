@@ -72,7 +72,7 @@ h1 {
 }
 
 .floating-text {
-  font-size: 24px;
+  font-size: 45px;
   color: #d1005b;
   animation: float 3s infinite ease-in-out;
   text-align: center;
