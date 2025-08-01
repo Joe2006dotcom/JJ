@@ -32,3 +32,10 @@ function showMessage() {
   const popup = document.getElementById("message-popup");
   popup.style.display = "block";
 }
+function playMusicAndShowMessage() {
+  const music = document.getElementById('bg-music');
+  const message = document.getElementById('message-popup');
+
+  music.play(); // Start the music
+  message.style.display = 'block'; // Show the message
+}
