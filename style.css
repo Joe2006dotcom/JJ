@@ -95,21 +95,35 @@ h1 {
 
 /* Floating Text on Page 2 */
 .floating-text {
-  position: relative;
-  font-size: 2.2em;
+  font-size: 2.8em;
   text-align: center;
   color: #ff4081;
   font-family: 'Segoe UI', cursive;
+  animation: floatText 3s ease-in-out infinite;
+  margin-top: 0;
+}
+
+/* Beating Heart Animation */
+.beating-heart {
+  font-size: 80px;
+  color: #ff3366;
   animation: heartbeat 1.5s ease-in-out infinite;
-  margin-top: 40vh;
+  margin-top: 10px;
 }
 
 /* Floating Animation */
+@keyframes floatText {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Heartbeat Animation */
 @keyframes heartbeat {
   0% { transform: scale(1); }
-  25% { transform: scale(1.1); }
+  25% { transform: scale(1.2); }
   40% { transform: scale(1); }
-  60% { transform: scale(1.1); }
+  60% { transform: scale(1.2); }
   100% { transform: scale(1); }
 }
 
@@ -138,27 +152,3 @@ h1 {
 .press-button:hover {
   background-color: #e60073;
 }
-.beating-heart {
-  font-size: 60px;
-  color: #ff3366;
-  animation: heartbeat 1.5s ease-in-out infinite;
-  margin-top: 10px;
-}
-
-@keyframes heartbeat {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.2);
-  }
-  40% {
-    transform: scale(1);
-  }
-  60% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-  
