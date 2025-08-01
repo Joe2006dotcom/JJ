@@ -72,11 +72,12 @@ h1 {
 }
 
 .floating-text {
-  font-size: 45px;
-  color: #d1005b;
-  animation: float 3s infinite ease-in-out;
-  text-align: center;
-  padding: 10px;
+  font-size: 32px; /* You can increase this if needed */
+  font-weight: bold;
+  color: #e91e63;
+  animation: floatText 3s ease-in-out infinite;
+  text-align: center;
+  margin-top: 40vh;
 }
 
 @keyframes float {
