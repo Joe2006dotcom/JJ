@@ -1,4 +1,3 @@
-/* General Styles */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -30,7 +29,6 @@ h1 {
   line-height: 1.5;
 }
 
-/* Heart Icon */
 .heart {
   font-size: 40px;
   animation: float 2s infinite ease-in-out;
@@ -39,13 +37,6 @@ h1 {
   margin-top: 20px;
 }
 
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0); }
-}
-
-/* Message Popup */
 #message-popup {
   display: none;
   background: #ffb3da;
@@ -60,12 +51,73 @@ h1 {
   animation: fadeIn 1s ease;
 }
 
+.next-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #ff66b2;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.second-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#fff0f5, #ffe6e6);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.floating-text {
+  font-size: 32px; /* You can increase this if needed */
+  font-weight: bold;
+  color: #e91e63;
+  animation: floatText 3s ease-in-out infinite;
+  text-align: center;
+  margin-top: 40vh;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+.press-button {
+  background-color: #ff66b2;
+  color: white;
+  font-size: 18px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-/* Press Button */
+#message-popup {
+  margin-top: 20px;
+  font-size: 18px;
+  background: #ffcce6;
+  padding: 10px 20px;
+  border-radius: 12px;
+  display: none;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* Add this at the end of style.css */
+
 .press-button {
   display: inline-block;
   margin-top: 20px;
@@ -84,59 +136,18 @@ h1 {
   background-color: #e60073;
 }
 
-/* Next Button */
-.next-btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 10px 20px;
-  background-color: #ff66b2;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-}
-
-/* Page 2 Styling */
-.second-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: linear-gradient(#fff0f5, #ffe6e6);
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* I Love You Floating Text */
-.floating-text {
-  font-size: 60px;
-  font-weight: bold;
-  color: #e91e63;
-  animation: floatText 3s ease-in-out infinite;
+.message-hidden {
+  display: none;
+  background: #ffb3da;
+  color: #600030;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 300px;
   text-align: center;
-  margin-top: 20px;
+  font-weight: bold;
+  animation: fadeIn 1s ease;
 }
 
-@keyframes floatText {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-/* Beating Heart Animation */
-.beating-heart {
-  position: absolute;
-  bottom: 30px;
-  font-size: 40px;
-  color: red;
-  animation: beat 1s infinite;
-}
-
-@keyframes beat {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.3);
-  }
-}
+Look here
