@@ -1,4 +1,3 @@
-// Poem text
 const poem = `Four months ago, our story began,
 Not just by fate, but by a perfect plan.
 Through late-night talks and morning smiles,
@@ -20,37 +19,37 @@ You’re my now, my always — my destiny. 💫`;
 
 let index = 0;
 
-// Typewriter effect function
+// Typewriter effect
 function typeWriter() {
   if (index < poem.length) {
     document.getElementById("poem").innerHTML += poem.charAt(index);
     index++;
-    setTimeout(typeWriter, 40); // typing speed
+    setTimeout(typeWriter, 40);
   }
 }
 
-// Trigger typewriter when page loads
 window.onload = typeWriter;
 
-// Show popup message when heart is clicked
-function showMessage() {
-  const popup = document.getElementById("message-popup");
-  popup.style.display = "block";
-  popup.style.opacity = 1;
-  setTimeout(() => {
-    popup.style.opacity = 0;
-    setTimeout(() => {
-      popup.style.display = "none";
-    }, 500);
-  }, 3000); // show for 3 seconds
-}
+// Show message and play music
 function playMusicAndShowMessage() {
-  const music = document.getElementById('bg-music');
-  const message = document.getElementById('message-popup');
+  const music = document.getElementById('bg-music');
+  const message = document.getElementById('message-popup');
 
-  // Play music
-  music.play();
+  // Check if music is paused, then play
+  if (music.paused) {
+    music.play().then(() => {
+      message.style.display = 'block';
+      message.style.opacity = 1;
 
-  // Show message
-  message.style.display = 'block';
+      setTimeout(() => {
+        message.style.opacity = 0;
+        setTimeout(() => {
+          message.style.display = 'none';
+        }, 500);
+      }, 3000); // Hide after 3 sec
+    }).catch(error => {
+      console.error("Autoplay failed:", error);
+      alert("Tap again to allow music playback due to browser restrictions.");
+    });
+  }
 }
