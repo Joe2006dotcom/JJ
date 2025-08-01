@@ -1,163 +1,139 @@
+/* General Page Style */
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(#ffe0f0, #fff);
-  overflow-x: hidden;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(#ffe0f0, #fff);
+  overflow-x: hidden;
 }
 
 .container {
-  padding: 20px;
-  text-align: center;
+  padding: 20px;
+  text-align: center;
 }
 
+/* Image Styling */
 .couple-photo {
-  max-width: 90%;
-  width: 1080px;
-  border-radius: 20px;
-  margin: 10px 0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  max-width: 90%;
+  width: 1080px;
+  border-radius: 20px;
+  margin: 10px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
 .couple-photo:hover {
-  transform: scale(1.03);
-
+  transform: scale(1.03);
 }
 
+/* Main Heading */
 h1 {
-  font-size: 28px;
-  color: #b30059;
+  font-size: 28px;
+  color: #b30059;
 }
 
+/* Typewriter Text */
 .typewriter {
-  white-space: pre-wrap;
-  font-size: 18px;
-  color: #333;
-  padding: 15px;
-  line-height: 1.5;
+  white-space: pre-wrap;
+  font-size: 18px;
+  color: #333;
+  padding: 15px;
+  line-height: 1.5;
 }
 
+/* Heart Floating Animation (Optional) */
 .heart {
-  font-size: 40px;
-  animation: float 2s infinite ease-in-out;
-  cursor: pointer;
-  text-align: center;
-  margin-top: 20px;
+  font-size: 40px;
+  animation: float 2s infinite ease-in-out;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 20px;
 }
 
+/* Message Popup */
 #message-popup {
-  display: none;
-  background: #ffb3da;
-  color: #600030;
-  padding: 15px;
-  border-radius: 10px;
-  margin: 20px auto;
-  width: 90%;
-  max-width: 300px;
-  text-align: center;
-  font-weight: bold;
-  animation: fadeIn 1s ease;
+  display: none;
+  background: #ffcce6;
+  color: #600030;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in-out;
 }
 
+/* Next Button */
 .next-btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 10px 20px;
-  background-color: #ff66b2;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #ff66b2;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
 }
 
+/* Second Page Layout */
 .second-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(#fff0f5, #ffe6e6);
-  height: 100vh;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#fff0f5, #ffe6e6);
+  height: 100vh;
+  overflow: hidden;
 }
 
-.floating-text {
-  font-size: 24px;
-  color: #d1005b;
-  animation: float 3s infinite ease-in-out;
-  text-align: center;
-  padding: 10px;
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
 .page2-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.press-button {
-  background-color: #ff66b2;
-  color: white;
-  font-size: 18px;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  margin-top: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Floating Text on Page 2 */
+.floating-text {
+  position: relative;
+  font-size: 3em; /* You can increase this further if needed */
+  text-align: center;
+  color: #ff4081;
+  font-family: 'Segoe UI', cursive;
+  animation: floatText 3s ease-in-out infinite;
+  margin-top: 40vh;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* optional glow */
 }
 
-#message-popup {
-  margin-top: 20px;
-  font-size: 18px;
-  background: #ffcce6;
-  padding: 10px 20px;
-  border-radius: 12px;
-  display: none;
-  animation: fadeIn 1s ease-in-out;
+/* Floating Animation */
+@keyframes floatText {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
 }
 
+/* Fade In Animation */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
+
+/* Press Button Style */
 .press-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 25px;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: #ff66b2;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ff66b2;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
 }
 
 .press-button:hover {
-  background-color: #e60073;
-}
-
-.message-hidden {
-  display: none;
-  background: #ffb3da;
-  color: #600030;
-  padding: 15px;
-  border-radius: 10px;
-  margin: 20px auto;
-  width: 90%;
-  max-width: 300px;
-  text-align: center;
-  font-weight: bold;
-  animation: fadeIn 1s ease;
+  background-color: #e60073;
 }
