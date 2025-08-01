@@ -1,83 +1,83 @@
-/* General styles */
 body {
   margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #ffe6eb;
-  color: #d6004c;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(#ffe0f0, #fff);
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 20px;
   text-align: center;
 }
 
-/* PAGE 1 */
+.couple-photo {
+  max-width: 200px;
+  border-radius: 15px;
+  margin: 10px 0;
+}
+
 h1 {
-  font-size: 2rem;
-  margin-top: 40px;
-  font-family: 'Dancing Script', cursive;
+  font-size: 28px;
+  color: #b30059;
 }
 
-h3 {
-  margin-top: 10px;
-  font-weight: bold;
+.typewriter {
+  white-space: pre-wrap;
+  font-size: 18px;
+  color: #333;
+  padding: 15px;
+  line-height: 1.5;
 }
 
-p {
-  max-width: 700px;
-  margin: 20px auto;
-  font-size: 1.3rem;
-  line-height: 1.6;
-}
-
-button {
-  background-color: #fff0f5;
-  color: #d6004c;
-  border: 1px solid #d6004c;
-  border-radius: 10px;
-  padding: 8px 14px;
-  font-size: 1rem;
+.heart {
+  font-size: 40px;
+  animation: float 2s infinite ease-in-out;
   cursor: pointer;
-}
-
-a {
-  color: #5200b6;
-  text-decoration: none;
-  font-size: 1.1rem;
-  display: block;
+  text-align: center;
   margin-top: 20px;
 }
 
-a:hover {
-  text-decoration: underline;
+#message-popup {
+  display: none;
+  background: #ffb3da;
+  color: #600030;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+  font-weight: bold;
+  animation: fadeIn 1s ease;
 }
 
-/* PAGE 2 */
+.next-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #ff66b2;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
 .second-page {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  background: linear-gradient(#fff0f5, #ffe6e6);
   height: 100vh;
-  background-color: #ffe6eb;
   overflow: hidden;
 }
 
-.page2-content {
-  position: relative;
-}
-
 .floating-text {
-  font-size: 2.5rem;
+  font-size: 32px; /* You can increase this if needed */
   font-weight: bold;
-  animation: float 3s ease-in-out infinite, heartbeat 1.5s infinite;
-  margin-top: 20px;
-  color: #d6004c;
-}
-
-/* Heart icon */
-.heart {
-  font-size: 2.5rem;
-  color: #ff3366;
-  animation: heartbeat 1.5s infinite;
-  margin-top: 10px;
+  color: #e91e63;
+  animation: floatText 3s ease-in-out infinite;
+  text-align: center;
+  margin-top: 40vh;
 }
 
 @keyframes float {
@@ -86,7 +86,66 @@ a:hover {
   100% { transform: translateY(0); }
 }
 
-@keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.15); }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.press-button {
+  background-color: #ff66b2;
+  color: white;
+  font-size: 18px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#message-popup {
+  margin-top: 20px;
+  font-size: 18px;
+  background: #ffcce6;
+  padding: 10px 20px;
+  border-radius: 12px;
+  display: none;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* Add this at the end of style.css */
+
+.press-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ff66b2;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.press-button:hover {
+  background-color: #e60073;
+}
+
+.message-hidden {
+  display: none;
+  background: #ffb3da;
+  color: #600030;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+  font-weight: bold;
+  animation: fadeIn 1s ease;
 }
