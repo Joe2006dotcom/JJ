@@ -44,3 +44,13 @@ function showMessage() {
     }, 500);
   }, 3000); // show for 3 seconds
 }
+function playMusicAndShowMessage() {
+  const music = document.getElementById('bg-music');
+  const message = document.getElementById('message-popup');
+
+  // Play music
+  music.play();
+
+  // Show message
+  message.style.display = 'block';
+}
