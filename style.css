@@ -96,20 +96,21 @@ h1 {
 /* Floating Text on Page 2 */
 .floating-text {
   position: relative;
-  font-size: 3em; /* You can increase this further if needed */
+  font-size: 2.2em;
   text-align: center;
   color: #ff4081;
   font-family: 'Segoe UI', cursive;
-  animation: floatText 3s ease-in-out infinite;
+  animation: heartbeat 1.5s ease-in-out infinite;
   margin-top: 40vh;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* optional glow */
 }
 
 /* Floating Animation */
-@keyframes floatText {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0px); }
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  40% { transform: scale(1); }
+  60% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
 /* Fade In Animation */
@@ -137,3 +138,27 @@ h1 {
 .press-button:hover {
   background-color: #e60073;
 }
+.beating-heart {
+  font-size: 60px;
+  color: #ff3366;
+  animation: heartbeat 1.5s ease-in-out infinite;
+  margin-top: 10px;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+  
